@@ -1,0 +1,56 @@
+{
+  "name": "redux-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.25.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts-ts": "3.1.0",
+    "redux": "^4.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "commit": "git-cz",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.11",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "commitizen": "^4.0.3",
+    "cz-customizable": "^6.2.0",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "cz-customizable": {
+    "config": "cz-config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,css,md}": [
+      "npm run format",
+      "git add"
+    ],
+    "*.{js,vue,ts,tsx}": [
+      "npm run lint",
+      "npm run format",
+      "git add"
+    ]
+  }
+}
