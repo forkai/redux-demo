@@ -12,6 +12,7 @@ export interface IState {
 class TodoList extends Component<{},IState> {
     constructor(props: any) {
         super(props);
+        //
         this.state = store.getState();
         this.changeInputValue = this.changeInputValue.bind(this);
         this.addItem = this.addItem.bind(this);
