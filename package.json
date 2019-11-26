@@ -41,8 +41,9 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "cross-env lint-staged"
+      "pre-commit": "cross-env lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      
     }
   },
   "lint-staged": {
