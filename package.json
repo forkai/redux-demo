@@ -19,6 +19,8 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
@@ -39,6 +41,7 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "cross-env lint-staged"
     }
   },
