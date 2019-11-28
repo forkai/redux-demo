@@ -15,12 +15,11 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "commit": "git-cz",
-    "lint": "tslint -p tsconfig.json",
+    "lint:ts": "tsc -p tsconfig.prod.json --noEmit && tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
@@ -28,7 +27,12 @@
     "commitizen": "^4.0.3",
     "cz-customizable": "^6.2.0",
     "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.7.2"
   },
   "config": {
@@ -41,17 +45,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "cross-env lint-staged",
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{json,css,md}": [
-      "npm run format",
-      "git add"
-    ],
-    "*.{js,vue,ts,tsx}": [
-      "npm run lint",
+    "*.{ts,tsx}": [
+      "npm run lint:ts",
       "npm run format",
       "git add"
     ]
