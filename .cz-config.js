@@ -2,9 +2,9 @@
   
 module.exports = {
     types: [
-        {value: ':sparkles: feat',     name: '  特性:   一个新的特性'},
-        {value: 'fix',     name: ' 🐞 修复:    🐞   修复一个Bug'},
-        {value: 'docs',     name: ' 📚 文档:   📚  变更的只有文档'},
+        {value: 'feat✨',     name: ' ✨ 特性:    ✨  一个新的特性'},
+        {value: 'fix🐞',     name: ' 🐞 修复:    🐞  修复一个Bug'},
+        {value: 'docs',     name: ' 📚 文档:    📚  变更的只有文档'},
         {value: 'style',     name: ' 💅 格式:    💅  空格, 分号等格式修复'},
         {value: 'refactor',     name: ' 🛠 重构:    🛠 代码重构，注意和特性、修复区分开'},
         {value: 'perf',     name: ' 🐎 性能:    🐎  提升性能'},
@@ -17,7 +17,7 @@ module.exports = {
         customScope: '请输入修改范围(可选):',
         subject: '短说明:',
         body: '长说明，使用"|"换行(可选)：',
-        footer: '关联关闭的issue，例如：#21, #34(可选):',
+        footer: '关联关闭的issue，例如：#31, #34(可选):',
         confirmCommit: '确定提交说明?'
     },
     allowCustomScopes: true,
