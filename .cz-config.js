@@ -17,7 +17,7 @@ module.exports = {
         customScope: '请输入修改范围(可选):',
         subject: '短说明:',
         body: '长说明，使用"|"换行(可选)：',
-        footer: '关联关闭的issue，例如：#31, #34(可选):',
+        footer: '关联关闭的issue，例如：#21, #34(可选):',
         confirmCommit: '确定提交说明?'
     },
     allowCustomScopes: true,
