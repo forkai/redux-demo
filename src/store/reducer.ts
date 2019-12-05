@@ -1,7 +1,7 @@
-import { CHANGE_INPUT_VALUE, ADD_ITEM, DELETE_ITEM } from './actionType'
+import {CHANGE_INPUT_VALUE, ADD_ITEM, DELETE_ITEM} from './actionType'
 const defaultState = {
   inputValue: '',
-  list: ['早上6点起床，锻炼身体', '中午吃饭休息一小时']
+  list: ['早上6点起床，锻炼身体', '中午吃饭休息一小时'],
 }
 export default (state = defaultState, action: any) => {
   let newState

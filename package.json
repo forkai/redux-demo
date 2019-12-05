@@ -16,7 +16,8 @@
     "eject": "react-scripts-ts eject",
     "commit": "git-cz",
     "lint:ts": "tsc -p tsconfig.prod.json --noEmit && tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
+    "lint": "npm run lint:ts",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.js\""
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
