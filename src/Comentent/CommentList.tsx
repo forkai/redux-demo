@@ -1,11 +1,13 @@
 import * as React from 'react'
-import {Component} from 'react'
+import { Component } from 'react'
+import Comment from './Comment'
 export interface CommentListProps {
-  test1: string
+  test1?: string
+  comments?: []
 }
 
 export interface CommentListState {
-  test2: string
+  test2?: string
 }
 
 class CommentList extends Component<CommentListProps, CommentListState> {
@@ -14,7 +16,8 @@ class CommentList extends Component<CommentListProps, CommentListState> {
     // this.state = {   };
   }
   render() {
-    return <p>commentList</p>
+    const { comments } = this.props
+    return <div>{comments ? this.props.comments.map((comment, i) => <Comment comment={comment} key={i} />) : null}</div>
   }
 }
 

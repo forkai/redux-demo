@@ -1,6 +1,6 @@
 import * as React from 'react'
-import {Component} from 'react'
-import {changInputValueActin, addItemActin, deleteItemActin} from '../store/actionCreator'
+import { Component } from 'react'
+import { changInputValueActin, addItemActin, deleteItemActin } from '../store/actionCreator'
 import store from '../store'
 import TodoListUI from './TodoListUI'
 
